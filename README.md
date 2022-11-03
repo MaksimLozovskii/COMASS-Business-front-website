@@ -1,0 +1,1 @@
+# COMASS - A front website for a business idea
