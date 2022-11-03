@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper_pageBanner{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    max-height: auto;
+    background-color: white;
+}
+
+.wrapper_navBar{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.wrapper_navBar > .navBar_item{
+    padding: 1rem;
+}
+
+.wrapper_navBar > .navBar_item > .item_link{
+    color: #55A379;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navBar_item .item_link:hover{
+    color:#f1c40f;
+}
+
+.wrapper_navBar > .navBar_item > .item_link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    transition: width .3s;
+    background-color: #55A379;
+}
+
+.wrapper_navBar > .navBar_item > .item_link:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+ 
+.navBar_item .item_link:active{
+    color:#55A379;
+}
+
+.wrapper_imgCont{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper_imgCont > .imgCont_img{
+    width: 250px;
+    height: 200px;
+    margin: 2em;
+}
+
+.mainContent_heading{
+    display: flex;
+    justify-content: center;
+}
+
+.mainContent_heading .heading_text{
+    color: #55A379;
+    font-size: 32px;
+}
+
+.mainContent_paragraph{
+    display: flex;
+    justify-content: center;
+}
+
+.mainContent_paragraph > .paragraph_text{
+    max-width: 866px;
+    color: #474747;
+    line-height: 1.5em;
+    font-size: 20px;
+}
+
+body::-webkit-scrollbar {
+    width: 20px;               /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: white;        /* color of the tracking area */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #55A379;    /* color of the scroll thumb */
+    border-radius: 50px;       /* roundness of the scroll thumb */
+    border: 5px solid white;  /* creates padding around scroll thumb */
+}
+
+
+@media only screen and (max-width: 950px){
+    /*Tablets [601px -> 1200px]*/
+
+    .pageBanner_img{
+        max-width: 400px;
+    }
+
+    .wrapper_navBar{
+        margin-top: 1em;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .wrapper_imgCont{
+        flex-wrap: wrap;
+    }
+
+    .wrapper_imgCont > .imgCont_img{
+        max-width: 500px;
+        max-height: 300px;
+        margin-bottom: 0.3em;
+    }
+
+    .mainContent_paragraph .paragraph_text{
+        margin: 2em;
+    }
+
+    .wrapper_navBar > .navBar_item > .item_link:hover::after{
+        width: 0;
+    }
+}
